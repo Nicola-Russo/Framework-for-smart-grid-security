@@ -63,5 +63,5 @@ Every 10 seconds the Processing_unit will send a "START trasmitting data" comman
 ## 5) Results
 You can see from terminal that new blocks has been mined in Ganache
 
-Open Ganache and go to "Blocks" or "Events" and see the content of new mined blocks which contain the data of PMU. So for each packet of data received from PMU will be mined two new blocks.
+Open Ganache and go to "Blocks" or "Events" and see the content of new mined blocks which contains the data of PMU. So for each packet of data received from PMU will be mined two new blocks.
 
