@@ -10,7 +10,7 @@ Prerequisites
 
 You need to have the following tools installed:
 
-Node.
+Node. \
 Ganache (>= 2.1.0). 
 VSCode.
 
