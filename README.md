@@ -11,7 +11,7 @@ Prerequisites
 You need to have the following tools installed:
 
 Node. \
-Ganache (>= 2.1.0). \
+Ganache EVM(>= 2.1.0). \
 VSCode.
 
 # Download the framework and first operations
