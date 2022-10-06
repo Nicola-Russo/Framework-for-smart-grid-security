@@ -3,7 +3,7 @@ An experimental framework for improving security in the context of smart grids
 
 The proposed experimental framework aims to demonstrate how the use of blockchain technology to implement data provenance is an efficient and effective choice to increase the level of IT security of a critical infrastructure such as that of smart grids, with the aim of protecting the data produced by them in order to address the most worrying vulnerabilities. In particular, we have chosen to adapt to the specific use case of smart grids, a blockchain-based platform called IoTProvenance developed by Marten Sigwart, which allows you to create, modify and invalidate data records, and to store them within the blockchain, going to meet the security requirements, i.e. authenticity, reliability and integrity of data.
 
-The framework was born from the experimental thesis work, therefore it can be improved, but use it with care.
+The framework was developed during my experimental thesis work for the master's degree, therefore it can be improved, but use it with care.
 
 # Try to run 
 
@@ -54,8 +54,10 @@ Open a new terminal in VSCode into the project folder "Processing Unit"
 
 Launch the following command: node Processing_unit.js
 
+Every 10 seconds the Processing_unit will send a "START trasmitting data" command throw a TLS connection to the PMU and after received the data the Processing unit request a _tokenId to IoTProvenance and create a new provenance record. You can stop this process using _CTRL+C_ in the terminal of Processing_Unit.js
+
 ## 5) Results
 You can see from terminal that new blocks has been mined in Ganache
 
-Open Ganache and go to "Blocks" or "Events" and see the content of new blocks mined witch contain the data of PMU
+Open Ganache and go to "Blocks" or "Events" and see the content of new mined blocks witch contain the data of PMU. So for each packet of data received from PMU will be mined two new blocks.
 
