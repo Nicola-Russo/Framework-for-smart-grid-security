@@ -6,7 +6,8 @@ The proposed experimental framework aims to demonstrate how the use of blockchai
 The framework was born from the experimental thesis work, therefore it can be improved, but use it with care.
 
 # Try to run 
-**Prerequisites**
+
+### Prerequisites
 
 You need to have the following tools installed:
 
@@ -16,7 +17,7 @@ _Ganache EVM (>= 2.1.0)_
 
 _VSCode_
 
-**1) Download the framework and first operations**
+### 1) Download the framework and first operations
 
 Clone the repository
 
@@ -25,7 +26,7 @@ Once you unzip the data (Magnitude.json and PhaseAngle.json) sure that the two f
 So you can delete the folder.zip
 
 
-**2) Deploy Smart Contracts on Ganache**
+## 2) Deploy Smart Contracts on Ganache
 
 Change into the project directory: _cd IoTProvenance/_
 
@@ -33,7 +34,7 @@ Install all dependencies: _npm install_
 
 Deploy contracts: _truffle migrate --reset_
 
-**3) Install dependencies of Processing Unit**
+## 3) Install dependencies of Processing Unit
 
 Change into the project directory: _cd ProcessingUnit/_
 
@@ -43,7 +44,7 @@ Open Ganache and copy the first account address and paste into the file "Process
 After this go into the section "CONTRACTS" of Ganache and search "SpecificProvenance" and copy the address of smart contract and paste into the same file at the line of code ~ 765. 
 Save the file.
 
-**4) Run the simulation**
+## 4) Run the simulation
 
 Open a new terminal in VSCode into the project folder "Processing Unit"
 
@@ -53,8 +54,8 @@ Open a new terminal in VSCode into the project folder "Processing Unit"
 
 Launch the following command: node Processing_unit.js
 
-**5) Results**
+## 5) Results
 You can see from terminal that new blocks has been mined in Ganache
 
-Open Ganache and go to "Blocks" or "Events" and see the content of new blocks mined that contain the data of PMU
+Open Ganache and go to "Blocks" or "Events" and see the content of new blocks mined witch contain the data of PMU
 
