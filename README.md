@@ -5,5 +5,20 @@ The proposed experimental framework aims to demonstrate how the use of blockchai
 
 The framework was born from the experimental thesis work, therefore it can be improved, but use it with care.
 
+# Try to run 
+Prerequisites
 
+You need to have the following tools installed:
 
+Node
+Ganache (>= 2.1.0)
+
+# Download the framework
+Clone the repository: git clone 
+
+Deploy Smart Contracts on Ganache
+
+Clone the repository: git clone git@github.com:msigwart/iotprovenance.git
+Change into the project directory: cd iotprovenance/
+Install all dependencies: npm install
+Deploy contracts: truffle migrate --reset
