@@ -10,11 +10,11 @@ The framework was born from the experimental thesis work, therefore it can be im
 
 You need to have the following tools installed:
 
-Node.
+_Node_
 
-Ganache EVM (>= 2.1.0).
+_Ganache EVM (>= 2.1.0)_
 
-VSCode.
+_VSCode_
 
 **Download the framework and first operations**
 
