@@ -12,39 +12,48 @@ You need to have the following tools installed:
 
 Node.
 
-Ganache EVM(>= 2.1.0).
+Ganache EVM (>= 2.1.0).
 
 VSCode.
 
-# Download the framework and first operations
+**Download the framework and first operations**
 Clone the repository
 
-Go to the folder "Processing Unit" and unzip "Dati_simulazione_PMU.zip". Once you unzip the data (Magnitude.json and PhaseAngle.json) sure that the two files are in the folder "Processing Unit". So you can delete the folder.zip
+Go to the folder "Processing Unit" and unzip "Dati_simulazione_PMU.zip". 
+Once you unzip the data (Magnitude.json and PhaseAngle.json) sure that the two files are in the folder "Processing Unit". 
+So you can delete the folder.zip
 
 
-# Deploy Smart Contracts on Ganache
+**Deploy Smart Contracts on Ganache**
 
-Change into the project directory: cd IoTProvenance/
+Change into the project directory: _cd IoTProvenance/_
 
-Install all dependencies: npm install
+Install all dependencies: _npm install_
 
-Deploy contracts: truffle migrate --reset
+Deploy contracts: _truffle migrate --reset_
 
-# Install dependencies of Processing Unit
+**Install dependencies of Processing Unit**
 
-Change into the project directory: cd ProcessingUnit/
+Change into the project directory: _cd ProcessingUnit/_
 
-Install all dependencies: npm install
+Install all dependencies: _npm install_
 
-Open Ganache and copy the first account address and paste into the file "Processing_unit.js" at the line of code ~ 766. After this go into the section "CONTRACTS" of Ganache and search "SpecificProvenance" and copy the address of smart contract and paste into the same file at the line of code ~ 765. Save the file.
+Open Ganache and copy the first account address and paste into the file "Processing_unit.js" at the line of code ~ 766. 
+After this go into the section "CONTRACTS" of Ganache and search "SpecificProvenance" and copy the address of smart contract and paste into the same file at the line of code ~ 765. 
+Save the file.
 
-# Run the simulation
+**Run the simulation**
 
-Open a new terminal and change into the project folder: cd Processing Unit
+Open a new terminal in VSCode into the project folder "Processing Unit"
 
 Launch the following command: node PMU.js
 
-Open a new terminal and change into the project folder: cd Processing Unit
+Open a new terminal in VSCode into the project folder "Processing Unit"
 
 Launch the following command: node Processing_unit.js
+
+**Results**
+You can see from terminal that new blocks has been mined in Ganache
+
+Open Ganache and go to "Blocks" or "Events" and see the content of new blocks mined that contain the data of PMU
 
