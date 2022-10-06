@@ -27,6 +27,8 @@ So you can delete the folder.zip
 
 Open Ganache and create a new workspace (ethereum). #### IMPORTANT: port number of workspace must be 8545
 
+Add project and select truffle-config.js from IoTProvenance folder
+
 ## 2) Deploy Smart Contracts on Ganache
 
 Change into the project directory: _cd IoTProvenance/_
