@@ -21,7 +21,7 @@ _VSCode_
 
 Clone the repository
 
-Go to the folder "Processing Unit" and unzip "Dati_simulazione_PMU.zip". 
+Go to the folder "Processing Unit" and unzip "Archivio.zip". 
 Once you unzip the data (Magnitude.json and PhaseAngle.json) sure that the two files are in the folder "Processing Unit". 
 So you can delete the folder.zip
 
