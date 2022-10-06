@@ -38,3 +38,13 @@ Install all dependencies: npm install
 
 Open Ganache and copy the first account address and paste into the file "Processing_unit.js" at the line of code ~ 766. After this go into the section "CONTRACTS" of Ganache and search "SpecificProvenance" and copy the address of smart contract and paste into the same file at the line of code ~ 765. Save the file.
 
+# Run the simulation
+
+Open a new terminal and change into the project folder: cd Processing Unit
+
+Launch the following command: node PMU.js
+
+Open a new terminal and change into the project folder: cd Processing Unit
+
+Launch the following command: node Processing_unit.js
+
