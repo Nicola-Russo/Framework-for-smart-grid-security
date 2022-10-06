@@ -6,7 +6,7 @@ The proposed experimental framework aims to demonstrate how the use of blockchai
 The framework was born from the experimental thesis work, therefore it can be improved, but use it with care.
 
 # Try to run 
-Prerequisites
+**Prerequisites
 
 You need to have the following tools installed:
 
