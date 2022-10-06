@@ -25,7 +25,7 @@ Go to the folder "Processing Unit" and unzip "Dati_simulazione_PMU.zip".
 Once you unzip the data (Magnitude.json and PhaseAngle.json) sure that the two files are in the folder "Processing Unit". 
 So you can delete the folder.zip
 
-Open Ganache and create a new workspace (ethereum). ####IMPORTANT: port number of workspace must be 8545
+Open Ganache and create a new workspace (ethereum). #### IMPORTANT: port number of workspace must be 8545
 
 ## 2) Deploy Smart Contracts on Ganache
 
