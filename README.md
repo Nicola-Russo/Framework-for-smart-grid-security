@@ -17,6 +17,7 @@ Ganache EVM (>= 2.1.0).
 VSCode.
 
 **Download the framework and first operations**
+
 Clone the repository
 
 Go to the folder "Processing Unit" and unzip "Dati_simulazione_PMU.zip". 
