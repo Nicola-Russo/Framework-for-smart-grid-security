@@ -21,8 +21,8 @@ _VSCode_
 
 Clone the repository
 
-Go to the folder "Processing Unit" and unzip "Archivio.zip". 
-Once you unzip the data (Magnitude.json and PhaseAngle.json) sure that the two files are in the folder "Processing Unit". 
+Go to the folder "SSLTLS connection from PMU to Processing unit" and unzip "Archivio.zip". 
+Once you unzip the data (Magnitude.json and PhaseAngle.json) sure that the two files are in the folder "SSLTLS connection from PMU to Processing unit". 
 So you can delete the folder.zip
 
 Open Ganache and create a new workspace (ethereum). #### IMPORTANT: port number of workspace must be 8545
@@ -40,7 +40,7 @@ Deploy contracts: _truffle migrate --reset_
 
 ## 3) Install dependencies of Processing Unit
 
-Change into the project directory: _cd ProcessingUnit/_
+Change into the project directory: _cd SSLTLS connection from PMU to Processing unit/_
 
 Install all dependencies: _npm install_
 
@@ -50,11 +50,11 @@ Save the file.
 
 ## 4) Run the simulation
 
-Open a new terminal in VSCode into the project folder "Processing Unit"
+Open a new terminal in VSCode into the project folder "SSLTLS connection from PMU to Processing unit"
 
 Launch the following command: node PMU.js
 
-Open a new terminal in VSCode into the project folder "Processing Unit"
+Open a new terminal in VSCode into the project folder "SSLTLS connection from PMU to Processing unit"
 
 Launch the following command: node Processing_unit.js
 
