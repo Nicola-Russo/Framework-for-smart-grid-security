@@ -50,13 +50,13 @@ Save the file.
 
 ## 4) Run the simulation
 
-Open a new terminal in VSCode into the project folder "SSLTLS connection from PMU to Processing unit"
+Open a new terminal in _VSCode_ into the project folder "SSLTLS connection from PMU to Processing unit"
 
-Launch the following command: node PMU.js
+Launch the following command: _node PMU.js_
 
-Open a new terminal in VSCode into the project folder "SSLTLS connection from PMU to Processing unit"
+Open a new terminal in _VSCode_ into the project folder "SSLTLS connection from PMU to Processing unit"
 
-Launch the following command: node Processing_unit.js
+Launch the following command: _node Processing_unit.js_
 
 Every 10 seconds the Processing_unit will send a "START trasmitting data" command throw a TLS connection to the PMU and after received the data the Processing unit request a _tokenId_ to IoTProvenance and create a new provenance record. You can stop this process using _CTRL+C_ in the terminal of Processing_Unit.js
 
