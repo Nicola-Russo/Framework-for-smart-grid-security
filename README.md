@@ -19,7 +19,7 @@ _VSCode_
 
 ### 1) Download the framework and first operations
 
-Clone the repository
+Clone the repository via _VSCode_ 
 
 Go to the folder "SSLTLS connection from PMU to Processing unit" and unzip "Archivio.zip". 
 Once you unzip the data (Magnitude.json and PhaseAngle.json) sure that the two files are in the folder "SSLTLS connection from PMU to Processing unit". 
