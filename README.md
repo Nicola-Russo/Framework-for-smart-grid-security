@@ -58,7 +58,7 @@ Open a new terminal in VSCode into the project folder "SSLTLS connection from PM
 
 Launch the following command: node Processing_unit.js
 
-Every 10 seconds the Processing_unit will send a "START trasmitting data" command throw a TLS connection to the PMU and after received the data the Processing unit request a _tokenId to IoTProvenance and create a new provenance record. You can stop this process using _CTRL+C_ in the terminal of Processing_Unit.js
+Every 10 seconds the Processing_unit will send a "START trasmitting data" command throw a TLS connection to the PMU and after received the data the Processing unit request a _tokenId_ to IoTProvenance and create a new provenance record. You can stop this process using _CTRL+C_ in the terminal of Processing_Unit.js
 
 ## 5) Results
 You can see from terminal that new blocks has been mined in Ganache
