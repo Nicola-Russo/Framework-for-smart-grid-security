@@ -762,8 +762,8 @@ const contractABI = [
       "type": "function"
     }
   ];
-const contractAddress = '0xe3870c84404AeEd1de874a2FF694866f1AB5D604';
-const accountAddress = '0xb8C660Bc796d8Ecf49bE590C6Fc229E3697E35a0';
+const contractAddress = '0x...'; // paste the contract address here
+const accountAddress = '0x...'; // paste the account address here
 
 // Creazione di un oggetto web3
 const web3 = new Web3(rpcURL);
@@ -771,7 +771,8 @@ const web3 = new Web3(rpcURL);
 // Oggetto che contiene i parametri della transazione
 const txObject = {
     from: accountAddress,
-    gas: web3.utils.toHex('1000000')
+    to: contractAddress,
+    gasLimit: web3.utils.toHex('300000') //gas limit per block, ovvero sto specificando la quantità massima di gas da utilizzare per ogni blocco
 };
 
 // Parametri per la connessione alla PMU
