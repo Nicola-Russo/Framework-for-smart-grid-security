@@ -3,7 +3,7 @@ pragma solidity ^0.5.0;
 import "./GenericProvenance.sol";
 import "./Provenance.sol";
 
-contract SpecificProvenance is Provenance, GenericProvenance("ProvenanceToken","PROV"){
+contract SpecificProvenance is Provenance, GenericProvenance("ProvenanceToken_smartgrid","Smart Grid"){
 
     function createProvenance(uint _tokenId, string memory _context) public returns (uint index)
     {
