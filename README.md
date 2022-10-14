@@ -30,11 +30,11 @@ Open Ganache and create a new workspace (ethereum). #### IMPORTANT: port number 
 
 ## 2) Deploy Smart Contracts on Ganache
 
-Change into the project directory: _cd IoTProvenance/_
+Change into the project directory: _cd Data provenance platform based on blockchain tecnology/_
 
 Install all dependencies: _npm install_
 
-Open Ganache and select "Add project" from setting menu and add "truffle-config.js" file from "IoTProvenance" folder
+Open Ganache and select "Add project" from setting menu and add "truffle-config.js" file from "Data provenance platform based on blockchain tecnology" folder
 
 Deploy contracts: _truffle migrate --reset_
 
