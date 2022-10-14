@@ -34,6 +34,8 @@ Change into the project directory: _cd Data provenance platform based on blockch
 
 Install all dependencies: _npm install_
 
+Delete the directory _Data_ if has been created at the end of _npm install_
+
 Open Ganache and select "Add project" from setting menu and add "truffle-config.js" file from "Data provenance platform based on blockchain tecnology" folder
 
 Deploy contracts: _truffle migrate --reset_
