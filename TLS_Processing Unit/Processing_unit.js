@@ -7,7 +7,8 @@ La connessione tra PMU e questa unità viene resa sicura implementando OpenSSL
 */
 
 'use strict'
-
+const cache = require('node-cache');
+const memoryCache = new cache({stdTTL: 10});
 // Richiesta dei moduli per SSL/TLS
 const tls = require('tls');
 const fs = require('fs');
@@ -762,8 +763,8 @@ const contractABI = [
       "type": "function"
     }
   ];
-const contractAddress = '0x403EDA94A7a0775A62023e0ebF01afb5c67041d0'; // paste the contract address here
-const accountAddress = '0xa59450a0b90C599Da5FF1d3453E340934bc8dd74' // paste the account address here
+const contractAddress = '0xFF0119064A9D63C7Fdc1245937a48dA3233A6ea6'; // paste the contract address here
+const accountAddress = '0xe22Cc9Ac2617DA811B93Efb27a5739BFC595eA91' // paste the account address here
 
 // Creazione di un oggetto web3
 const web3 = new Web3(rpcURL);
@@ -827,25 +828,39 @@ client.on('data', async function(data){
 
     // Lettura dei dati inviati dalla PMU sulla socket e parsing in string 
     var dati = data.toString();
+   //Caching
+    memoryCache.set('record', dati, 60)  //key, value, ttl (in seconds)
+    console.log(await memoryCache.get('record'))
+    
+    //qui andrà un if per scegliere se mettere o meno i dati su blockchain (altrimenti delete)
     //Log della ricezione dei dati dalla PMU
     console.log("\n Data received from PMU")
-    //Log della creazione di nuovi blocchi
-    console.log("\n Mining new blocks...")
+    const readline = require('readline');
+    const rl = readline.createInterface({input: process.stdin, output: process.stdout});
+    rl.question("\n Do you want to store data in the blockchain? [y/n]", async function(response){
+      if (response == "y") {
+         //Log della creazione di nuovi blocchi
+        console.log("\n Mining new blocks...")
 
-    // Richiesa allo smart contract di IoTProvenance di fornire un nuovo tokenId per tracciare la nuova misura
-    provenance.methods.requestToken().send(txObject);
-    // Lettura del tokenId richiesto precedentemente
-    let tokenId = await provenance.methods.requestToken().call();
-    // Creazione del record di provenance indicizzato con il tokenId, e con i dati della PMU
-    provenance.methods.createProvenance(tokenId, dati).send(txObject);
+        // Richiesa allo smart contract di IoTProvenance di fornire un nuovo tokenId per tracciare la nuova misura
+        provenance.methods.requestToken().send(txObject);
+        // Lettura del tokenId richiesto precedentemente
+        let tokenId = await provenance.methods.requestToken().call();
+        // Creazione del record di provenance indicizzato con il tokenId, e con i dati della PMU
+        provenance.methods.createProvenance(tokenId, dati).send(txObject);
 
-    //Log della creazione di un nuovo record di provenance
-    console.log("\n-------------------MINED BLOCKS-------------------")
-    console.log("New provenance records for the PMU has been created!");
-    console.log("> ETH value of transaction : ~ 0.008 ETH");
-    console.log("> Transaction cost (€) : ~ 11,00 €");
-    console.log("> Transaction cost ($) : ~ 10,76 $");
-    console.log("----------------------------------------------------\n")
+        //Log della creazione di un nuovo record di provenance
+        console.log("\n-------------------MINED BLOCKS-------------------")
+        console.log("New provenance records for the PMU has been created!");
+        console.log("> ETH value of transaction : ~ 0.008 ETH");
+        console.log("----------------------------------------------------\n") 
+      }
+      else if (response == 'n') {
+        let deleted_record = memoryCache.del("record");
+        console.log("Record Deleted:" + deleted_record)
+      }
+    })
+  
 
     // Chiusura della connessione dopo aver ricevuto i dati e scritti nella blockchain
     client.end();
@@ -871,6 +886,10 @@ client.on('data', async function(data){
 
     });
 
-},10*1000) // 10 secondi = 10* 1000 millisecondi
+},15*1000) // 15 secondi = 10* 1000 millisecondi
+
+
+
+
    
 
