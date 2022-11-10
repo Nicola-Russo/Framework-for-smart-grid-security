@@ -50,8 +50,8 @@ Change into the project directory: _cd TLS_Processing unit/_
 
 Install all dependencies: _npm install_
 
-Open Ganache and copy the first account address and paste into the file "Processing_unit.js" at the line of code ~ 766. 
-After this go into the section "CONTRACTS" of Ganache and search "SpecificProvenance" and copy the address of smart contract and paste into the same file at the line of code ~ 765. 
+Open Ganache and copy the first account address and paste into the file "Processing_unit.js" at the line of code ~ 767. 
+After this go into the section "CONTRACTS" of Ganache and search "SpecificProvenance" and copy the address of smart contract and paste into the same file at the line of code ~ 766. 
 Save the file.
 
 ## 4) Run the simulation
