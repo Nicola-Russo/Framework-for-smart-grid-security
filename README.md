@@ -25,7 +25,7 @@ _Linux OS recommended_
 
 Clone the repository via _VSCode_ 
 
-Go to the folder "TLS_Processing unit" and unzip "Archivio.zip". 
+Go to the folder "TLS_Processing unit" and unzip "Sensor_data.zip". 
 Once you unzip the data (Magnitude.json and PhaseAngle.json) sure that the two files are in the folder "TLS_Processing unit". 
 So you can delete the folder.zip
 
